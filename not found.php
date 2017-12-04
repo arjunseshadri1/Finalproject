@@ -17,6 +17,7 @@
 
 <body>
 
+<h1>Page Not Found 404</h1>
 
 
 <script src="js/scripts.js"></script>
