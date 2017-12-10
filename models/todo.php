@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 
 final class todo extends database\model {
@@ -21,3 +22,28 @@ final class todo extends database\model {
 }
 
 ?>
+=======
+<?php
+
+final class todo extends database\model {
+
+    public $id;
+//    public $owneremail;
+//    public $ownerid;
+    public $createddate;
+    public $duedate;
+    public $message;
+    public $isdone;
+    public $account_id;
+    protected static $modelName = 'todo';
+
+    public static function getTablename() {
+
+        $tableName = 'todos';
+        return $tableName;
+    }
+
+}
+
+?>
+>>>>>>> 6097e39b962008fc7f67bcf275258c6199b16741
