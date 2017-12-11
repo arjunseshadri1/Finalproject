@@ -74,5 +74,9 @@ class accountsController extends http\controller {
         session_destroy();
         header('Location: index.php');
     }
+    
+    public static function remove() {
+        self::getTemplate('delete_account');
+    }
 
 }

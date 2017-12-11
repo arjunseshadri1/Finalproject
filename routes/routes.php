@@ -176,6 +176,16 @@ class routes {
         $route->controller = 'accountsController';
         $route->method = 'edit';
         $routes[] = $route;
+        
+        //Delete Account
+        $route = new route();
+        $route->http_method = 'GET';
+        $route->action = 'remove';
+        $route->page = 'accounts';
+        $route->controller = 'accountsController';
+        $route->method = 'remove';
+        $routes[] = $route;
+        
 
         return $routes;
     }

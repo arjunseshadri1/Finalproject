@@ -20,11 +20,15 @@
         <?php
 //this is how you print something
 
+        if (isset($_SESSION['logged_in'])) {
+            $record = \accounts::findUser($_SESSION['logged_in']);
+            echo '<h2>Welcome, <a href="index.php?page=accounts&action=show&id=' . $record->id . '">' . $_SESSION['logged_in'] . '</a>.</h2><br>';
+            $html = '<h3><a href="index.php?page=accounts&action=logout">Logout</a></h3>';
+            print_r($html);
+        }
+        
         if ($data != NULL) {
             print utility\htmlTable::genarateTableFromMultiArray($data);
-        }else
-        {
-            echo '<h3><a href="index.php?page=accounts&action=logout">Logout</a></h3>';
         }
         ?>
 
